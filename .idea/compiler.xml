@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="ape-common-mybatisplus" />
+        <module name="ape-common-redis" />
+        <module name="ape-common-starter" />
+        <module name="ape-user" />
+        <module name="ape-common-web" />
+        <module name="ape-common-log" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
