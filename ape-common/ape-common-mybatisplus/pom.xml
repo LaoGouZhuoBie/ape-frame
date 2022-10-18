@@ -5,7 +5,7 @@
     <parent>
         <artifactId>ape-common</artifactId>
         <groupId>com.king</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
     </parent>
 
     <groupId>com.king</groupId>
@@ -15,22 +15,30 @@
     <packaging>jar</packaging>
 
     <dependencies>
+<!--        jdbc启动器-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
         </dependency>
+
+<!--        durid数据库连接池依赖-->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
+
+<!--        mysql连接器-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
+
+<!--        mybatis-plus启动器-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
+
     </dependencies>
 
 </project>

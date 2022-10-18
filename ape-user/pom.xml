@@ -61,11 +61,13 @@
             <version>${ape.common.version}</version>
         </dependency>
 
+<!--        Java注释处理器，用于生成类型安全的bean映射类-->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct</artifactId>
         </dependency>
 
+<!--        mapstruct 的插件，它就是专门用来处理 domin 实体类与 model 类的属性映射的-->
         <dependency>
             <groupId>org.mapstruct</groupId>
             <artifactId>mapstruct-processor</artifactId>
@@ -73,22 +75,22 @@
 
     </dependencies>
 
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>central</id>-->
-<!--            <name>aliyun maven</name>-->
-<!--            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>-->
-<!--            <layout>default</layout>-->
-<!--            &lt;!&ndash; 是否开启发布版构件下载 &ndash;&gt;-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--            &lt;!&ndash; 是否开启快照版构件下载 &ndash;&gt;-->
-<!--            <snapshots>-->
-<!--                <enabled>false</enabled>-->
-<!--            </snapshots>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <layout>default</layout>
+            <!-- 是否开启发布版构件下载 -->
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <!-- 是否开启快照版构件下载 -->
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>
@@ -102,7 +104,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-
         </plugins>
         <resources>
             <resource>

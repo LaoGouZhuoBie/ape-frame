@@ -1,2 +1,68 @@
 server:
   port: 8100
+spring:
+  datasource:
+    username: root
+    password: VlXzVN2K
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://116.62.102.58:3306/ape-frame?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&useSSL=false
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      initial-size: 20
+      min-idle: 20
+      max-active: 100
+      max-wait: 60000
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+      filter:
+        stat:
+          enabled: true
+          log-slow-sql: true
+          slow-sql-millis: 2000
+        wall:
+          enabled: true
+  redis:
+    host: 116.62.102.58
+    port: 6379
+    database: 0
+#    Lettuce 是一个可伸缩线程安全的 Redis 客户端。多个线程可以共享同一个 RedisConnection。它利用优秀 netty NIO 框架来高效地管理多个连接。
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 8
+        max-wait: -1
+        min-idle: 0
+
+
+
+#开启sql打印
+sql:
+  beauty:
+    show: false
+
+#    mybatis-plus配置
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: delete_flag
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+    banner: false
+#    mapper文件存储位置
+  mapper-locations: classpath:mapper/*.xml
+
+swagger:
+  base-package: com.jingdianjichi
+  title: ape-frame
+  contact-name: 经典鸡翅
+  contact-url: 地址
+  email: jichi@163.com
+  version: 1.0
+  description: 从0到1 开箱即用脚手架
+
+#  日志配置
+logging:
+  config: classpath:log4j2-spring.xml
