@@ -30,7 +30,7 @@ public class ExceptionAdaptController {
     @ExceptionHandler({RuntimeException.class})
     public Result runTimeException(RuntimeException exception){
         exception.printStackTrace();
-        return Result.fail();
+        return Result.fail(exception.toString());
     }
 
 
@@ -42,7 +42,7 @@ public class ExceptionAdaptController {
     @ExceptionHandler({Exception.class})
     public Result exception(Exception exception){
         exception.printStackTrace();
-        return Result.fail();
+        return Result.fail(exception.toString());
     }
 
 }

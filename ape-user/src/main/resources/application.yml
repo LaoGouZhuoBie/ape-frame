@@ -17,18 +17,25 @@ spring:
       max-active: 100
 #      获取连接最长等待时间
       max-wait: 60000
+#      durid SQL监控界面
       stat-view-servlet:
+#      监控界面启动开关
         enabled: true
         url-pattern: /druid/*
         login-username: admin
         login-password: 123456
       filter:
+#        监控统计用的拓展插件 建议开启
         stat:
           enabled: true
+#          慢sql日志开启
           log-slow-sql: true
+#          sql执行时间超过2s就算是慢sql
           slow-sql-millis: 2000
+#  开启监控界面防火墙
         wall:
           enabled: true
+#  redis配置
   redis:
     host: 116.62.102.58
     port: 6379
@@ -46,15 +53,17 @@ spring:
 #开启sql打印
 sql:
   beauty:
-    show: false
+    show: true
 
 #    mybatis-plus配置
 mybatis-plus:
   global-config:
     db-config:
+#      开启逻辑删除 删除状态 1  未删除状态 0
       logic-delete-field: delete_flag
       logic-delete-value: 1
       logic-not-delete-value: 0
+#      mybatis-plus 这个banner 图形是否显示 此处关闭不显示
     banner: false
 #    mapper文件存储位置
   mapper-locations: classpath:mapper/*.xml
